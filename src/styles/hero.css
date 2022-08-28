@@ -1,0 +1,99 @@
+.hero-section {
+    height: 700px;
+    padding: 50px;
+    background: url('../assets/hero-bg.svg');
+    background: url(/static/media/hero-bg.19939ac5.svg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-between;
+}
+.hero-section .hero-side {
+    width: 50%;
+}
+.hero-side h1 {
+    font-family: 'Lexa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 80px;
+
+/* Brand-main */
+    color: #2156DA;
+    width: 40vw;
+}
+
+.hero-side h5 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+/* identical to box height */
+
+
+/* Black-50 */
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 35px;
+    font-family: 'Lexa';
+}
+
+.subscribe-form-area {
+    margin-top: 104px;
+}
+
+.subscribe-form-area h5 {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+form.subscribe-form {
+    margin-top: 20px;
+    height: 80px;
+}
+
+.subscribe-form input {
+    height: 65px;
+    width: 300px;
+    border: 2px solid #2156DA;
+    outline: none;
+    margin-right: 17px;
+    background: transparent;
+    padding: 20px;
+}
+
+.subscribe-form button {
+    margin:5px;
+    height: 65px;
+    width: 150px;
+    background: #2156DA;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+}
+@media (max-width: 1200px) {
+    .hero-section {
+        display: block;
+        background-color: linear-gradient(216.35deg, rgba(160, 146, 146, 0) 15.56%, rgba(160, 146, 146, 0.024) 31.84%, rgba(160, 146, 146, 0.094) 64.3%, rgba(160, 146, 146, 0.2) 80.97%);
+        height: fit-content;
+    }
+    
+    .hero-section .hero-side {
+        width: 100%;
+    }
+    
+    .hero-side h1 {
+        width: 100%;
+    }
+    
+    .subscribe-form-area {
+        margin-top: 20px;
+    }
+    
+    .responsive {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+}

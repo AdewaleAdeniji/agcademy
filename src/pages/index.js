@@ -1,12 +1,12 @@
 import React from 'react';
+import HeroSection from '../components/landing/HeroSection';
+import PageContainer from '../containers/PageContainer';
 
-const AppTemplate = () => {
+const LandingPage = () => {
     return (
-        <div>
-            Hello There!!!
-            Thanks for using this template
-            Say Hi to me @Devferanmi on Twitter.
-        </div>
+        <PageContainer title="Agcademy">
+            <HeroSection/>
+        </PageContainer>
     );
 }
-export default AppTemplate;
+export default LandingPage;

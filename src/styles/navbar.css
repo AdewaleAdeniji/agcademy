@@ -1,130 +1,108 @@
 .topnav {
-  position: fixed;
-  top: 0;
-  height: 100px;
-  background: #fff;
-  width: 100%;
-  padding-left: 245px;
-  padding-top: 28px;
-  padding-bottom: 28px;
-  padding-right: 100px;
-  z-index: 500;
+    display: flex;
+    background: #fff;
+    height: 100px;
+    padding: 30px 90px;
+    justify-content: space-between;
 }
-.search-box {
-  padding-left: 25px;
-  background-size: 20px;
-  padding: 14px 20px;
-  width: 503px;
-  height: 48px;
-  background-color: #f9fbff;
-  border-radius: 20px;
-  padding-left: 50px;
-  transition: 0.8s;
-  font-family: "Montserrat", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  /* identical to box height */
-
-  color: #c6c7c8;
-}
-.note-head {
-  margin-left: 40px;
-  padding-right: 40px;
-}
-.btn-track {
-  width: 227px;
-  height: 48px;
-  background: #ffffff;
-  /* Light gray */
-
-  border: 1px solid #b8b8b8;
-  border-radius: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 12px 30px;
-  gap: 10px;
-  margin-left: 28px;
-}
-.btn-notification {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: #f8faff;
-  border-radius: 50%;
-  margin-left: 28px;
-}
-.notifications-overlay {
-  top: 90px;
-  position: fixed;
-  z-index: 1500;
-  background: #fff;
-  width: 646px;
-  height: 720px;
-  right: 160px;
-  box-shadow: 0px 3px 60px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
+.nav-links ul {
+    display: flex;
 }
 
-.notifications {
-  padding-top: 40px;
+.nav-links ul li {
+    margin-left: 40px;
 }
 
-.notifications h4 {
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 34px;
-  color: #333333;
-}
-.short .notifications-list {
-  height: 500px;
-  overflow: scroll;
-}
-.btn-delete {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px 10px 12px;
-  gap: 10px;
-  width: 190px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
-  /* identical to box height */
+.nav-links ul li a {
+    font-family: Lexa;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+/* identical to box height */
 
-}
-.btn-delete:hover {
-  background: #F5F5F5;
+
+/* Black-100 */
+    color: #000000;
 }
 
-.single-notification button.btn-menu-open {
-  width: 32px;
-  height: 32px;
-  background: #eeeeee;
-  padding: 4px;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  display: none;
-  transition: .5s;
+.nav-links ul li a.active {
+    color: #2156DA;
 }
-.single-notification:hover  button.btn-menu-open{
-  display: flex;
+
+.act-button {
+    width: 130px;
+    height: 50px;
+    background: #FFC333;
+    padding: 10px;
+    font-size: 16px !important;
 }
-.short .single-notification:hover  button.btn-menu-open {
-  display: none;
+.nav-mobile {
+    background: #fff;
+    justify-content: space-between;
+    padding: 30px;
 }
-.rc-dropdown-menu {
-  /* extend menustyles */
-  padding-top: 8px !important;
-  padding-bottom: 8px !important;
+
+.nav-mobile img {
+    height: 30px;
+    width: auto;
 }
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #2156DA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-content {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-content ul li {
+    margin-bottom: 50px;
+    font-family: 'lexa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 30px;
+/* identical to box height */
+
+
+/* Black-100 */
+    color: #fff;
+    text-align: center;
+}
+button.closenav {
+    position: absolute;
+    top: 3%;
+    color: #fff;
+    right: 5%;
+}
+img.nav-logo-float {
+    position: absolute;
+    bottom: 5%;
+}
+.mobile {
+    display: none;
+}
+@media (max-width: 900px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+        display: flex;
+    }
+    .act-button {
+        width: 200px;
+    }
+  }

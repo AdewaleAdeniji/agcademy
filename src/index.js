@@ -6,7 +6,6 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 // Internal Modules
 import './tailwind/main.css';
-import "leaflet/dist/leaflet.css";
 import * as serviceWorker from './serviceWorker';
 import Log from './utilityLibrary/dev/logging'
 // Redux
@@ -15,7 +14,6 @@ import store from './store/store'
 import App from './App';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import "rc-dropdown/assets/index.css";
 
 require('dotenv').config(); // Allows us to access our variables in the .env file of our root directory
 
