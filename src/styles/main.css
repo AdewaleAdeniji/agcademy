@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 @import "./navbar.css";
 @import "./hero.css";
+@import "./feature.css";
 
 :root {
-  font-family: "Nunito", sans-serif;
+  font-family: "Lexa", sans-serif;
 }
 body {
   background: #f9fbff;
@@ -286,4 +287,12 @@ h4.page-title {
 }
 a {
   cursor: pointer;
+}
+.flex-desktop {
+  display: flex;
+}
+@media (max-width: 900px) {
+  .mobile-block {
+    display: block !important;
+  }
 }

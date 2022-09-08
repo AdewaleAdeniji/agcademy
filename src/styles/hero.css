@@ -1,6 +1,7 @@
 .hero-section {
     height: 700px;
     padding: 50px;
+    padding-left: 91px;
     background: url('../assets/hero-bg.svg');
     background: url(/static/media/hero-bg.19939ac5.svg);
     background-position: bottom;
@@ -64,6 +65,7 @@ form.subscribe-form {
 
 .subscribe-form button {
     margin:5px;
+    margin-left: 0px;
     height: 65px;
     width: 150px;
     background: #2156DA;
@@ -75,6 +77,7 @@ form.subscribe-form {
 @media (max-width: 1200px) {
     .hero-section {
         display: block;
+        padding-left: 30px !important;
         background-color: linear-gradient(216.35deg, rgba(160, 146, 146, 0) 15.56%, rgba(160, 146, 146, 0.024) 31.84%, rgba(160, 146, 146, 0.094) 64.3%, rgba(160, 146, 146, 0.2) 80.97%);
         height: fit-content;
     }
