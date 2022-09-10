@@ -75,6 +75,7 @@
     margin-top: 5%;
   }
 }
+
 @media (max-width: 700px) {
   .offer-desc h4 {
     font-size: 40px;

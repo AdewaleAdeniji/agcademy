@@ -4,6 +4,7 @@ import DrivingUs from '../components/landing/DrivingUs';
 import Features from '../components/landing/Features';
 import HeroSection from '../components/landing/HeroSection';
 import Offer from '../components/landing/Offer';
+import UseCase from '../components/landing/UseCase';
 import PageContainer from '../containers/PageContainer';
 
 const LandingPage = () => {
@@ -14,6 +15,7 @@ const LandingPage = () => {
             <DrivingUs />
             <DesignBy />
             <Offer/>
+            <UseCase />
         </PageContainer>
     );
 }
