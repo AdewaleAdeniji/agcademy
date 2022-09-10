@@ -42,7 +42,7 @@ const DrivingUs = () => {
         <h6>Sensitizing Africa towards modern agriculture. Transforming Agric of culture to business through agribusiness consultancy, financing, branding, marketing.</h6>
       </div>
     </div>
-
+    
     </>
   );
 };

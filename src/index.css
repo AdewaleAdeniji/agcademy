@@ -27,6 +27,6 @@ html {
   src: local('LatoRegular'), url(./fonts/LatoRegular.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Lexa';
-  src: local('Lexa'), url(./fonts/lexa.ttf) format('truetype');
+  font-family: 'Lexend Deca';
+  src: local('Lexend Deca'), url(./fonts/Lexend Deca.ttf) format('truetype');
 }

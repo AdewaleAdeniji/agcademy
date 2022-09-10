@@ -4,9 +4,12 @@
 @import "./hero.css";
 @import "./feature.css";
 @import "./drivingUs.css";
+@Import "./designby.css";
+@import "./offer.css";
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
-  font-family: "Lexa", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
 }
 body {
   background: #f9fbff;
@@ -282,10 +285,16 @@ h4.page-title {
   display: flex;
   align-items: center;
 }
-@font-face {
-  font-family: 'Lexa';
-  src: local('Lexa'), url(../fonts/lexa.ttf) format('truetype');
+.fling-down {
+  padding-left: 20%;
 }
+.desktop-show {
+  display: block;
+}
+/* @font-face {
+  font-family: 'Lexend Deca';
+  src: local('Lexend Deca'), url(../fonts/Lexend Deca.ttf) format('truetype');
+} */
 a {
   cursor: pointer;
 }
@@ -293,6 +302,9 @@ a {
   display: flex;
 }
 @media (max-width: 900px) {
+  .mobile-none {
+    display: none;
+  }
   .mobile-block {
     display: block !important;
   }

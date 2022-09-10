@@ -4,6 +4,7 @@
     display: flex;
     padding: 100px 90px;
     align-items: center;
+    background-color: rgba(160, 146, 146, 0.09);
 }
 .driving-text {
     margin-left: 68px;
@@ -96,6 +97,7 @@
     .driving-m {
         display: block;
         padding: 48px 36px;
+        background-color: rgba(160, 146, 146, 0.09);
     }
     
     .m-d img {

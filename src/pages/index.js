@@ -1,7 +1,9 @@
 import React from 'react';
+import DesignBy from '../components/landing/DesignBy';
 import DrivingUs from '../components/landing/DrivingUs';
 import Features from '../components/landing/Features';
 import HeroSection from '../components/landing/HeroSection';
+import Offer from '../components/landing/Offer';
 import PageContainer from '../containers/PageContainer';
 
 const LandingPage = () => {
@@ -10,6 +12,8 @@ const LandingPage = () => {
             <HeroSection/>
             <Features />
             <DrivingUs />
+            <DesignBy />
+            <Offer/>
         </PageContainer>
     );
 }
