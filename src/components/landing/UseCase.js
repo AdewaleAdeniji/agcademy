@@ -1,8 +1,10 @@
 import React from "react";
 import UseCaseCard from "../cards/UseCaseCard";
+import FlingDown from "../common/FlingDown";
 
 const UseCase = () => {
   return (
+    <>
     <div className="usecase">
       <div className="usecase-head">
         <h3>
@@ -33,6 +35,8 @@ const UseCase = () => {
         </div>
       </div>
     </div>
+    <FlingDown />
+    </>
   );
 };
 export default UseCase;

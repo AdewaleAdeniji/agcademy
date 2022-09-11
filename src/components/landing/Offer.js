@@ -28,12 +28,14 @@ const Offer = () => {
           className="img-offer mobile-none"
         />
       </div>
+      <div className="mobile-offer-img">
       <img
           src={require("../../assets/offer.svg")}
           className="img-offer outside"
           alt="Offer description"
         />
       <FlingDown />
+      </div>
     </div>
   );
 };

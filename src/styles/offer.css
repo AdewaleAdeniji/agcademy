@@ -57,6 +57,7 @@
     display: block;
   }
   .img-offer.outside {
+    position: initial;
     margin-top: -5%;
     display: block;
   }
@@ -74,6 +75,11 @@
     flex-direction: column;
     margin-top: 5%;
   }
+}
+.mobile-offer-img {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 @media (max-width: 700px) {

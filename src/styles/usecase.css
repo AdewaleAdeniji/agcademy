@@ -112,3 +112,70 @@
 .usecase-column.two {
     margin-top: -30%;
 }
+@media (max-width: 1400px) {
+  .usecase-title {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    text-align: center;
+  }
+  .usecases {
+    display: block;
+  }
+  .usecase-row {
+    justify-content: center;
+    width: 100%;
+  }
+  .usecase-column, .usecase-column.two {
+    margin-top: 0px;
+  }
+  .usecase-head h3 {
+    width: 90%;
+  }
+  .usecase-head h6 {
+    width: 70%;
+  }
+  .usecase-title h4 {
+    width: 100%;
+  }
+}
+@media(max-width: 900px){
+    .usecase {
+      padding: 30px;
+    }
+    .usecase-row {
+      flex-direction: column;
+    }
+    .usecase-column {
+      width: 100%;
+    }
+    .usecase-title h4 { 
+      font-size: 32px;
+      line-height: 40px;
+    }
+    .usecase-card {
+      width: 100%;
+      height: fit-content;
+    }
+    .usecase-card h4 {
+      width: 90%;
+    }
+    .usecase-card h6 {
+      width: 90%;
+    }
+    .usecase-column.two {
+      margin-left: 0px;
+    }
+    .usecase-head h3 {
+      width: 100%;
+      font-size: 42px;
+      line-height: 50px;
+    }
+    .usecase-head h6 {
+      width: 100%;
+    }
+    .usecase-title {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+} 
