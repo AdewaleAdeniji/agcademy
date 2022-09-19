@@ -34,8 +34,8 @@ const Offer = () => {
           className="img-offer outside"
           alt="Offer description"
         />
-      <FlingDown />
       </div>
+      <FlingDown />
     </div>
   );
 };

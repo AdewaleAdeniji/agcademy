@@ -90,3 +90,11 @@
 .boxed-one.two {
     background: url('../assets/teach-img-2.svg');
 }
+@media(max-width: 1400px) {
+  .teach-with-us {
+    margin-top: 150px;
+  }
+}
+@media(max-width: 900px){
+   
+}
