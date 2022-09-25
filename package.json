@@ -36,7 +36,8 @@
     "redux": "^4.2.0",
     "request": "^2.88.2",
     "styled-components": "^5.3.5",
-    "sweetalert2": "^11.4.16"
+    "sweetalert2": "^11.4.16",
+    "swiper": "^8.4.2"
   },
   "scripts": {
     "start": "npm run watch:css && react-scripts start --hot",
