@@ -3,6 +3,7 @@
     display: flex;
     padding: 91px;
     padding-top: 140px;
+    padding-bottom: 40px;
 }
 
 .footer-links {
@@ -128,4 +129,8 @@ a.instagram {
 .foot-links-two a {
     margin-right: 68px;
     width: 200px;
+}
+.img-footer {
+    display: flex;
+    justify-content: center;
 }

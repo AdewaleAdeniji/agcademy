@@ -32,7 +32,9 @@ const Footer = () => {
                 </div>
             </div>
             <div className='footer-desc'>
-                <img src={require('../../assets/logo-white.svg')} alt="Logo agcademy"/>
+                <div className='img-footer'>
+                    <img src={require('../../assets/logo-white-single.svg')} alt="Logo agcademy"/>
+                </div>
                 <p>To increase the growth of agric farmers and food landscape in Africa, a decentralised online education to help farmers.</p>
                 <div className='social-links'>
                     <a className='twitter'>
