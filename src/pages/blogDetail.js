@@ -1,26 +1,76 @@
-import React from 'react';
-import PageContainer from "../containers/PageContainer"
+import React, { useEffect, useState } from "react";
+import { useHistory, useParams } from "react-router-dom";
+import PageContainer from "../containers/PageContainer";
+import { blogCache } from "../services/blog";
+import { CircularProgress } from "@mui/material";
+import moment from "moment";
+import readingTime from "reading-time";
+import ReactMarkdown from "react-markdown";
 
 const BlogDetails = () => {
-    const blogTitle = 'Agribusiness'
-    return (
-        <PageContainer title={blogTitle}>
-            <div className='blog-detail'>
-                <h6 className='blog-tag'>Agribusiness</h6>
-                <h4 className='blog-title'>Innovation in Agriculture Financing</h4>
-                <p className='blog-meta'>May 15 2022 . 1 min Read</p>
-                <img src={require('../assets/logo-flat-white.svg')} className='img-sig' alt="Agca"/>
+  window.scrollTo(0, 0);
+  const [loading, setLoading] = useState(true);
+  const [blog, setBlog] = useState({});
+  const { id } = useParams();
+  const history = useHistory();
+  if (!id) {
+    history.push("/blogs");
+  }
+  useEffect(() => {
+    if (loading) {
+      getBlog();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [loading]);
+  const getBlog = async () => {
+    const blog = await blogCache.getBlog({ id, setLoading });
+    setBlog(blog);
+  };
+  const stats = readingTime(blog?.contentMarkdown || "");
+  return (
+    <PageContainer title={blog?.title}>
+      {loading && (
+        <div className="load-more blog">
+          <button>
+            <CircularProgress
+              color="inherit"
+              sx={{
+                color: "#fffff",
+              }}
+            />
+          </button>
+        </div>
+      )}
+      {!loading && !blog?.status && (
+        <div className="load-more blog">Blog could not be found!</div>
+      )}
+      {!loading && blog?.status && (
+        <div className="blog-detail">
+          <h6 className="blog-tag">Agribusiness</h6>
+          <h4 className="blog-title">{blog?.title}</h4>
+          <p className="blog-meta">
+            {moment(blog?.dateAdded).format("ll")} . {stats?.text}
+          </p>
+          <img
+            src={require("../assets/logo-flat-white.svg")}
+            className="img-sig"
+            alt="Agcademy"
+          />
 
-                <img src={require('../assets/blog-img.svg')} className='blog-image' alt="blog"/>
-                <div className='blog-text'>
-                <p>To improve the lives of people and contribute to the nation's financial growth by providing innovative solutions, products and services including noninterest loans, thrift savings, seamless transactions, financial intelligence and job opportunities.</p>
-                <h5>Agricultural FInancing </h5>
-                <p>To improve the lives of underbanked people and contribute to the nation's financial growth by providing innovative solutions, products and services including noninterest loans, thrift savings, seamless transactions, financial intelligence and job opportunities.</p>
-                <p>To improve the lives of underbanked people and contribute to the nation's financial growth by providing innovative solutions, products and services including noninterest loans, thrift savings, seamless transactions, financial intelligence and job opportunities.</p>
-                </div>
-            </div>
-        </PageContainer>
-    )
-}
+          {blog?.coverImage && (
+            <img
+              src={blog?.coverImage || require("../assets/blog-img.svg")}
+              className="blog-image"
+              alt="blog"
+            />
+          )}
+          <div className="blog-text">
+            <ReactMarkdown>{blog?.contentMarkdown}</ReactMarkdown>
+          </div>
+        </div>
+      )}
+    </PageContainer>
+  );
+};
 
 export default BlogDetails;

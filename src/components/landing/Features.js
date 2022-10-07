@@ -1,5 +1,8 @@
 import React from 'react';
+import { backgroundCacheUpdate } from '../../services/blog';
+
 const Features = () => {
+    backgroundCacheUpdate(0);
     return (
         <div className="flex-desktop  features">
             <div className="single-feature">

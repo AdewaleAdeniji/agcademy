@@ -1,18 +1,19 @@
 import React from "react";
 import FlingDown from "../common/FlingDown";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-
+import { Flip, Fade } from "react-reveal";
 const Offer = () => {
   return (
     <div className="offer">
       <div className="offer-description">
         <div className="offer-desc">
           <div className="flex">
-            <h4>Created for ambitious farmers.</h4>
-            <img
+            <h4><Fade cascade count={3}>Created for ambitious farmers.</Fade></h4>
+            <Flip tada forever><img
               src={require("../../assets/agcademy-yellow.svg")}
               alt="Alcademy"
             />
+            </Flip>
           </div>
           <h6>
             To increase the growth of agric farmers and food landscape in

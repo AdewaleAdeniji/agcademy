@@ -8,6 +8,10 @@ const Utils = {
 
     return !!token && !Utils.isTokenExpired(token); // handwaiving here
   },
+  getParam(key){
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(key) || '';
+  },
   logout() {
     // remove user from local storage to log user out
     localStorage.removeItem(`admin`);

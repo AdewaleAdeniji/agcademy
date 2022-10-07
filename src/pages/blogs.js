@@ -5,6 +5,7 @@ import BlogsList from '../components/blog/BlogsList';
 import PageContainer from '../containers/PageContainer';
 
 const Blogs = () => {
+    window.scrollTo(0,0);
     return (
         <PageContainer title={'Blogs'}>
             <BlogHero />

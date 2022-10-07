@@ -1,15 +1,7 @@
-const dev = {
-    API_URL: 'staging_api_url',
+const config = {
+    HASHNODE_API_URL: 'https://api.hashnode.com/',
+    HASHNODE_TOKEN: process.env.REACT_APP_HASHNODE_TOKEN,
+    HASHNODE_USERNAME: process.env.REACT_APP_HASHNODE_USERNAME
 };
-
-const prod = {
-    API_URL: 'api_url',
-};
-
-const config = process.env.REACT_APP_STAGE === 'production'
-    ? prod
-    : dev;
-
-export default {
-    ...config,
-};
+console.log(process.env);
+export default config;

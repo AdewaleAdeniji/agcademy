@@ -2,16 +2,22 @@
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { Zoom, Bounce } from "react-reveal";
+import { Link } from "react-router-dom";
 const NavBar = () => {
   const [open, setOpen] = React.useState(false);
   return (
     <>
       <div className="topnav desktop">
+        <Link to="/">
         <img src={require("../../assets/logo.svg")} alt="Agcademy Logo" />
+        </Link>
         <div className="nav-links">
           <ul>
             <li>
               <a className="active">About</a>
+            </li>
+            <li>
+              <Link to="/blogs">Blog</Link>
             </li>
             <li>
               <a>Courses</a>

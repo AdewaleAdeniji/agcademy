@@ -16,7 +16,7 @@
 }
 .single-blog a {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 30px;
   color: #2156da;
   margin-bottom: 10px;
@@ -117,6 +117,7 @@ h4.blog-title {
   color: #111D4A;
   margin-top: 44px;
   text-align: center;
+  width: 70%;
 }
 
 p.blog-meta {
@@ -138,10 +139,11 @@ img.img-sig {
   font-weight: 500;
   font-size: 20px;
   line-height: 135%;
-  text-align: center;
+  text-align: left;
   letter-spacing: -0.02em;
   color: #343439;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 
 .blog-text p {
@@ -192,6 +194,9 @@ img.img-sig {
   .blog-form .subscribe {
     text-align: center;
     padding-left: 20px;
+  }
+  h4.blog-title {
+    width: 90%;
   }
   .blog-text {
     width: 90%;
