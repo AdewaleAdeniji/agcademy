@@ -16,7 +16,7 @@ export async function gql(query, variables = {}) {
 }
 export const GET_USER_ARTICLES = `
 query GetUserArticles($page: Int!) {
-    user(username: ${config.HASHNODE_USERNAME}) {
+    user(username: "${config.HASHNODE_USERNAME}") {
       publication {
         posts(page: $page) {
           title
@@ -48,7 +48,7 @@ const getBlogFromId = (str) => {
 export const getBlogs = async ({ page, setLoading, blogs }) => {
   const response = await gql(GET_USER_ARTICLES, { page: page });
   const result = await response.json();
-  const fetchedBlogs = result.data.user.publication.posts;
+  const fetchedBlogs = result?.data?.user?.publication?.posts||[];
   setLoading(false);
   fetchedBlogs.map((b) => {
     return (b.id = buildBlogId(b, page));
